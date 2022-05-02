@@ -15,6 +15,8 @@ const debug = logger('quill');
 const globalRegistry = new Parchment.Registry();
 Parchment.ParentBlot.uiClass = 'ql-ui';
 
+console.log("SNOW THEME CONSOLE LOG");
+
 class Quill {
   static debug(limit) {
     if (limit === true) {
@@ -63,6 +65,7 @@ class Quill {
   }
 
   constructor(container, options = {}) {
+    console.log("SNOW THEME CONSOLE LOG");
     this.options = expandConfig(container, options);
     this.container = this.options.container;
     if (this.container == null) {
@@ -170,6 +173,7 @@ class Quill {
   }
 
   focus() {
+    console.log("SNOW THEME CONSOLE LOG");
     const { scrollTop } = this.scrollingContainer;
     this.selection.focus();
     this.scrollingContainer.scrollTop = scrollTop;
@@ -264,6 +268,7 @@ class Quill {
   }
 
   getContents(index = 0, length = this.getLength() - index) {
+    console.log("SNOW THEME CONSOLE LOG");
     [index, length] = overload(index, length);
     return this.editor.getContents(index, length);
   }
@@ -276,6 +281,7 @@ class Quill {
   }
 
   getIndex(blot) {
+    console.log("SNOW THEME CONSOLE LOG");
     return blot.offset(this.scroll);
   }
 
