@@ -78,6 +78,7 @@ SnowTooltip.TEMPLATE = [
 
 class SnowTheme extends BaseTheme {
   constructor(quill, options) {
+    console.log("SNOW THEME CONSOLE LOG");
     if (
       options.modules.toolbar != null &&
       options.modules.toolbar.container == null
